@@ -1,0 +1,35 @@
+.task1 {
+    width: 440px;
+    height: 888px;
+}
+
+#categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+#categories li {
+    border-radius: 8px;
+    padding: 16px;
+    width: 392px;
+    background: #f6f6fe;
+}
+
+#categories h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+    margin-bottom: 16px;
+}
+
+#categories li ul {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#categories li li {
+    border: 1px solid #808080;
+    border-radius: 4px;
+}
