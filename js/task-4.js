@@ -1,21 +1,24 @@
 const loginForm = document.querySelector(".login-form");
-Array.from(loginForm.elements).forEach(
-  (element) => (element.placeholder = "Type area")
-);
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (
-    loginForm.elements[0].value === "" ||
-    loginForm.elements[1].value === ""
-  ) {
+  
+  // Отримуємо значення полів з очищенням пробілів
+  const email = loginForm.elements.email.value.trim();
+  const password = loginForm.elements.password.value.trim();
+  
+  // Перевіряємо очищені значення
+  if (!email || !password) {
     alert("All form fields must be filled in");
     return;
   }
+  
+  // Формуємо об'єкт з очищеними даними
   const result = {
-    [loginForm.elements[0].name]: loginForm.elements[0].value.trim(),
-    [loginForm.elements[1].name]: loginForm.elements[1].value.trim(),
+    email: email,
+    password: password
   };
+  
   console.log(result);
   loginForm.reset();
 });
